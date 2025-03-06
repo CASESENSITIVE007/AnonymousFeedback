@@ -1,7 +1,6 @@
 //mongoose btt krta hai mongo db se
-import { verify } from 'crypto';
-import mongoose, {Schema,Document} from  './../../../node_modules/mongoose/types/index.d';
-import { Message } from './User.modal';
+import mongoose, { Document, Schema } from 'mongoose'; //
+
 
 
 //Document is liye lgaya hai kyuki hm yha typesafety use krre hain or yha hmne typescrypt use kra hai 
@@ -35,14 +34,13 @@ export interface User extends Document{ //same jaise hmne messageSchema bnaya ha
     email: string;
     password : string;
     verifyCode : string;
-
     verifyCodeExpiry : Date;
     isVerified : boolean;
     isAcceptingFeedback : boolean;
     messages:Message[]
 }
 const UserSchema : Schema<User> = new Schema({ 
-    UserName :{
+    userName :{
         type:String,
         required:[true,"Username is required"],
         trim:true,

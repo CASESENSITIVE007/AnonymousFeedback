@@ -1,0 +1,4 @@
+hmne ye isliye bnaya hai taki jb bhi data aaye api se ya khi se bhi to wo database mai jane se phle validate ho uske bdd hm use database mai dalien 
+
+
+hm ye kaam model mai bhi kr skte the lekin ye best practice hai ki validation logic ko alg rkho 
