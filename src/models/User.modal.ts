@@ -30,7 +30,7 @@ const MessageSchema : Schema<Message> = new Schema({
 })
 
 export interface User extends Document{ //same jaise hmne messageSchema bnaya hai waise hi userSchema bnaya hai
-    userName : string ;  
+    username : string ;  
     email: string;
     password : string;
     verifyCode : string;
@@ -40,7 +40,7 @@ export interface User extends Document{ //same jaise hmne messageSchema bnaya ha
     messages:Message[]
 }
 const UserSchema : Schema<User> = new Schema({ 
-    userName :{
+    username :{
         type:String,
         required:[true,"Username is required"],
         trim:true,
@@ -71,7 +71,7 @@ const UserSchema : Schema<User> = new Schema({
         default:false
     },
     isAcceptingFeedback:{
-        type:Boolean,
+        type:Boolean, 
         default:true
     },
     messages:[MessageSchema]

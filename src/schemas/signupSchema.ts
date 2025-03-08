@@ -4,7 +4,7 @@ export const emailValidation = z.string().email("Please fill a valid email addre
 export const passwordValidation = z.string().min(6,"Password must be atleast 6 characters").max(20,"Password must be atmost 20 characters");
 
 export const signupSchema = z.object({
-    userName:usernameValidation,
+    username:usernameValidation,
     email:emailValidation,
     password:passwordValidation
 })
